@@ -24,6 +24,8 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
+        margin-left: 40px;
+        margin-right: 40px;
 }
 .blueberry .slides li {
 	position: absolute;

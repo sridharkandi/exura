@@ -119,7 +119,7 @@ $(document).ready(function(){
 
     $('#new-customer h6').text('Subscribe to our newsletter');
     $('#user_password_confirmation, #user_password').val("DummyPassword");
-    $('#new-customer #password-credentials');
+    $('#new-customer #password-credentials').hide();
     
 
 

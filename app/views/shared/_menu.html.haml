@@ -5,7 +5,11 @@
   %li{:class=>"#{@current=='products' ? 'active' : ''}"}
     %a{:href=>'/activities'}
       %span= "Actions"
-  %li{:class=>"#{@current=='products' ? 'active' : ''}"}
-    %a{:href=>'/contact'}
-      %span= "Contact Us"
+    %a{:href=>'/pages/about_us' }
+      %span= "About Us "
+    -# = link_to "About Us", "pages/about_us" 
+    -# %li{:class=>"#{@current=='products' ? 'active' : ''}"}
+    -# %a{:href=>'/contact'}
+    -# %span= "Contact Us"
+
 

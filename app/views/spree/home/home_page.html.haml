@@ -22,14 +22,14 @@
     //   %label Vacation end date
     //   %input{:type => "date", :value => "#{ params[:ae].blank? ? Date.today : params[:as]}", :name=>"ae"}
     .field
-      %label{:for=>"activity_type"} Keyword(s)
+      %label{:for=>"activity_type"} 
       = text_field_tag :keyword
     .field
       %label{:for=>"activity_type"} Activity Type
-      = select_tag :act, options_for_select(Spree::Product.non_empty_activities_names_list, params[:act]), {:include_blank => 'Select activity type'}
+      = select_tag :act, options_for_select(Spree::Product.non_empty_activities_names_list, params[:act]), { :index => nil }
     .field
       %label{:for=>"level"} Level
-      = select_tag :lvl, options_for_select(Spree::Product::LEVELS, params[:lvl]), {:include_blank => 'Select activity level'}
+      = select_tag :lvl, options_for_select(Spree::Product::LEVELS, params[:lvl]), { :index => nil }
     .field
       %label{:for=>"location"} Location
       = select_tag :loc, options_for_select(Spree::Product.active_cities_list, params[:loc]), {:include_blank => 'Select activity location'}
@@ -83,6 +83,7 @@
   .right_col
     %h5 Videos
     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "200", :src => "http://www.youtube.com/embed/fKmSF0sf31g", :width => "300"}
+    
     -# feed = Feedzirra::Feed.fetch_and_parse("http://exurajourneys.wordpress.com/category/videos/feed")
     -# = feed.to_json
     -# - feed.entries.each do |e|

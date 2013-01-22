@@ -1,12 +1,16 @@
 #footer
   .footer_links
     .fwc
+      = link_to image_tag( 'fb_small_icon.gif'), 'http://www.facebook.com/pages/exurain/127043117458886'
       - [ "Activities", "Contact", "Blog"].each do |item|
         - url = '/' + item.gsub(' ', '').underscore
         %a{:href=>url}= item.titleize
-      - ["About Us", "Faqs", "Partners And Operators", "Privacy Policy", "Terms And Conditions"].each do |item|
+      - ["Home"].each do |item|
+        %a{:href=>'/'}= item.titleize
+      - [ "Faqs", "Partners And Operators", "Privacy Policy", "Terms And Conditions"].each do |item|
         - url = '/pages/' + item.gsub(' ', '').underscore
         %a{:href=>url}= item.titleize
+      %a{:href => "http://www.facebook.com/pages/exurain/127043117458886", :target => "_blank"} Facebook
   #copy
     .fwc
       &copy; 2000 - 2020, Exura.in, All rights reserved.
