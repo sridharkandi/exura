@@ -8,7 +8,7 @@
   %h1 Exura gives you experience from experts.
 #cannonball
   %h2 Search Activities
-  %h4 Plan your most thrilling vacation with us yet!
+  %h4 Plan your most thrilling vacation with us !
   - @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots
   = form_tag activities_path, :method => :get do
     -# = select_tag :taxon,                               |
@@ -21,20 +21,18 @@
     // .field
     //   %label Vacation end date
     //   %input{:type => "date", :value => "#{ params[:ae].blank? ? Date.today : params[:as]}", :name=>"ae"}
-    .field
-      %label{:for=>"activity_type"} 
-      = text_field_tag :keyword
+    
     .field
       %label{:for=>"activity_type"} Activity Type
-      = select_tag :act, options_for_select(Spree::Product.non_empty_activities_names_list, params[:act]), { :index => nil }
+      = select_tag :act, options_for_select(Spree::Product.non_empty_activities_names_list.sort.reverse, params[:act]), { :index => nil }
     .field
       %label{:for=>"level"} Level
-      = select_tag :lvl, options_for_select(Spree::Product::LEVELS, params[:lvl]), { :index => nil }
+      = select_tag :lvl, options_for_select(Spree::Product::LEVELS.sort, params[:lvl]), { :index => nil }
     .field
       %label{:for=>"location"} Location
       = select_tag :loc, options_for_select(Spree::Product.active_cities_list, params[:loc]), {:include_blank => 'Select activity location'}
     .field.ar
-      = submit_tag "Go!", :name => nil, :class=>"btn"
+      = submit_tag "Explore!", :name => nil, :class=>"btn"
 #carousel
   %h2 Browse Actitvities
   .car_wrapper
@@ -73,7 +71,7 @@
                 \/
                 = @product.level
               %p
-                = @product.description.truncate(240) rescue ''
+                = @product.description.truncate(100) rescue ''
 
   -# - unless @featured.nil?
   -#   .left_col
@@ -82,6 +80,9 @@
   -#       = render :partial => 'spree/products/product_box', :locals => {:products => @featured}, :collection => @feaured
   .right_col
     %h5 Videos
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "200", :src => "http://www.youtube.com/embed/fKmSF0sf31g", :width => "300"}
+    %br
+    %br
     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "200", :src => "http://www.youtube.com/embed/fKmSF0sf31g", :width => "300"}
     
     -# feed = Feedzirra::Feed.fetch_and_parse("http://exurajourneys.wordpress.com/category/videos/feed")
