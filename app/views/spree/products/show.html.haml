@@ -54,8 +54,7 @@
           $('a[rel="facebox"]').addClass('btn').text('Send an Enquiry')
         %br
         %br
-        %span.small
-          or call us on +91-9845524873
+          %span{:style => "color:green;font-weight:bold"} or call us on +91-9845524873
           -# %div{"data-hook" => "contact"}
           -#   = render "spree/shared/error_messages", :target => @message
           -#   %br/
@@ -86,7 +85,7 @@
             -#       %p= submit_tag t("send_message"), :class => 'btn'
         -# = render :partial => 'cart_form'
       .map.content_box
-        -# = gmaps({:map_options => {:auto_adjust=>true, :zoom=>@product.zoom_level}, :markers=> {:data => @product.to_gmaps4rails}})
+        = gmaps({:map_options => {:auto_adjust=>true, :zoom=>@product.zoom_level}, :markers=> {:data => @product.to_gmaps4rails}})
       -# .content_box.related_activities
       -#   %h4.heading
       -#     Related Activities

@@ -47,7 +47,7 @@ namespace :exura do
       p.duration = rand(60)
       p.latitude = Faker::Address.latitude
       p.longitude = Faker::Address.longitude
-      p.zoom_level = rand(7) + 1
+      p.zoom_level = rand(1) + 1
       if p.duration > 20
         p.name = "#{p.duration} min #{act_name} in #{p.city}"
       else

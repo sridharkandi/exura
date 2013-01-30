@@ -59,7 +59,7 @@
 
 				//hide all slides, fade in the first, add active class to first slide
 				slides.hide().eq(current).fadeIn(o.duration).addClass('active');
-				
+
 
 				//build pager if it doesn't already exist and if enabled
 				if(pager.length) {
@@ -145,8 +145,8 @@
 				$(window).resize(function(){
 					setsize();
 				});
-				
-				
+
+
 
 				//Add keyboard navigation
 

@@ -8,11 +8,13 @@
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
   margin: 0.5em auto;
 }
 
 #gmaps4rails_map {
+  width: 658px;
+  height: 348px;
 }
 
 #map{

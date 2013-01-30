@@ -313,7 +313,7 @@ body
     border-bottom: 2px dotted #ccc
     padding: 0.125em 0
     padding-left: 5px
-    color: $o
+    color: red
     &:hover
       border-bottom-color: rgba($o, 0.95)
     &:focus
@@ -846,7 +846,7 @@ ul#products.inline.product-listing
 #copy
   color: #fafafa
   +ts-dark-over
-  +adjust-font-size-to(10px)
+  +adjust-font-size-to(15px)
   font-weight: 600
   text-align: right
   background-color: rgba(0, 0, 0 ,0.1)
@@ -962,7 +962,7 @@ ul#products.inline.product-listing
   margin-right: 5%
 
 .btn.checkout
-  +adjust-font-size-to(20px)
+  +adjust-font-size-to(15px)
   &:after
     content: "»"
 
@@ -1056,6 +1056,8 @@ fieldset
   +ts-dark
   h1
     color: #fafafa
+  margin-left: 40px
+  margin-right: 40px
       
 
 .post
@@ -1097,7 +1099,6 @@ fieldset
     +ts-dark
     +adjust-font-size-to(12px)
 
-
 #main_container.pages
   font-size: 0.85em
 
@@ -1123,9 +1124,11 @@ li.faq
     +transition(0.1s)
     border: 1px solid #ccc
     +border-radius(0.25em)
-    &:focus
+    
+      &:focus
       width: 80%
       +opacity(1)
+     
     &[type="submit"]
       display: inline-block
       vertical-align: middle
