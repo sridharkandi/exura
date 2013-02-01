@@ -38,7 +38,7 @@
   .car_wrapper
     - Spree::Taxon.all_activity_types.each do |act|
       - if act.active_activities_count > 0
-        %a.activity_box{:href=>products_path(:act=>act.name)}
+        %a.activity_box{:href=> products_path(:act=>act.name)}
           .img
             = image_tag act.icon.url(:original), :class=>"pictogram"
           .detail
@@ -57,7 +57,7 @@
         - @product = pr
         %a.box{:href=>url_for(@product), :title=>"#{@product.name} | #{@product.location}"}
           - if @product.images[0]
-            .img{:style=>"background-image: url('#{@product.images[0].attachment.url(:small)}')"}
+            .img{:style=>"background-image: url('#{@product.images[0].attachment.url(:product)}')"}
             .details
               %h3
                 = @product.name.truncate 30
