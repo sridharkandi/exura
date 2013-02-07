@@ -73,7 +73,7 @@ namespace :exura do
       ## Add HTML Fields
       p.overview = Faker::Lorem.paragraphs(rand(5)+1).join("</p><p>")
       p.features = Faker::Lorem.paragraphs(rand(5)+1).join("</p><p>")
-      p.exclusions = Faker::Lorem.paragraphs(rand(5)+1).join("</p><p>")
+      p.reviews = Faker::Lorem.paragraphs(rand(5)+1).join("</p><p>")
       k = "<ul>"
       rand(10).times do
         k += "<li> #{Faker::Lorem.sentences(rand(4) +1).join} </li>"

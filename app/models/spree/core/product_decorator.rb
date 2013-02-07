@@ -6,7 +6,7 @@ Spree::Product.class_eval do
 
   # Constants
   LEVELS = ['Easy', 'Moderate', 'Difficult', 'Strenuous', 'Exploratory']
-  TAB_FIELDS = ['overview', 'highlights', 'features', 'exclusions']
+  TAB_FIELDS = ['overview', 'highlights', 'features', 'reviews','itinerary']
   LIST_OF_STATES = ['Andaman and Nicobar', 'Daman and Diu', 'Delhi - NCT', 'Tamil Nadu', 
                     'Karnataka', 'Maharashtra', 'Jammu and Kashmir', 'Himanchal Pradesh',
                     'Orissa', 'West Bengal', 'Maharashtra', 'Kerala', 'Mizoram', 'Tripura',
@@ -19,7 +19,7 @@ Spree::Product.class_eval do
 
   # Accessible attrs
   tmp = [:level, :category, :level, :category, :facilities, :items_to_bring,
-         :min_passengers_reqd, :max_passengers_reqd, :overview, :highlights, :features, :exclusions, :cancellation_policy,
+         :min_passengers_reqd, :max_passengers_reqd, :overview, :highlights, :features, :reviews, :itinerary, :cancellation_policy,
          :latitude, :longitude, :zoom_level, :street_address, :city, :state, :duration, :on_hand_on_sunday, :on_hand_on_monday, :on_hand_on_tuesday,
          :on_hand_on_wednesday, :on_hand_on_thursday, :on_hand_on_friday,:on_hand_on_saturday, :product_type, :price_per_day,
          :featured, :activity_type, :bookable_from, :bookable_to

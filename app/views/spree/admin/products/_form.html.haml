@@ -26,7 +26,7 @@
         = f.input :longitude, :input_html => {:value => "#{@product.new_record? ? 77.5943760 : @product.longitude}"}
         = f.input :zoom_level, :input_html => {:value => "#{@product.new_record? ? 3 : @product.zoom_level}"}
       = f.inputs :name=>"HTML fields" do
-        - ["Overview", "Highlights", "Features", "Exclusions", "Cancellation Policy"].each do |field|
+        - ["Overview", "Highlights", "Features", "Reviews", "itinerary", "Cancellation Policy"].each do |field|
           = f.input field.underscore.gsub(' ', '_' ).to_sym, :as=>"text", :input_html=>{:class=>"wysiwyg"}
     .right{"data-hook" => "admin_product_form_right"}      
       = f.inputs :name => "When does this go live on the site?" do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121231071023) do
+ActiveRecord::Schema.define(:version => 20130205104006) do
 
   create_table "date_ranges", :force => true do |t|
     t.date     "starts_at"
@@ -400,7 +400,7 @@ ActiveRecord::Schema.define(:version => 20121231071023) do
     t.text     "overview"
     t.text     "highlights"
     t.text     "features"
-    t.text     "exclusions"
+    t.text     "reviews"
     t.float    "longitude"
     t.float    "latitude"
     t.boolean  "gmaps"
@@ -420,6 +420,7 @@ ActiveRecord::Schema.define(:version => 20121231071023) do
     t.boolean  "featured"
     t.date     "bookable_from"
     t.date     "bookable_to"
+    t.text     "itinerary"
   end
 
   add_index "spree_products", ["available_on"], :name => "index_spree_products_on_available_on"

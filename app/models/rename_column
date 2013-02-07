@@ -1,0 +1,54 @@
+sridhar@exura:~/rails_projects/sriexura-staging$ rails g migration rename_column(spree_products,exclusions,reviews)
+-bash: syntax error near unexpected token `('
+sridhar@exura:~/rails_projects/sriexura-staging$ rails g migration rename_column(:spree_products,:exclusions,:reviews)
+-bash: syntax error near unexpected token `('
+sridhar@exura:~/rails_projects/sriexura-staging$ rename_column :spree_products, :exclusions, :reviews
+rename_column: command not found
+sridhar@exura:~/rails_projects/sriexura-staging$ rails g migration rename exclusions to reviews
+      invoke  active_record
+      create    db/migrate/20130204055212_rename.rb
+sridhar@exura:~/rails_projects/sriexura-staging$ rake db:migrate
+/home/sridhar/.rvm/gems/ruby-1.9.3-p327@rails3tutorial2ndED/gems/ffaker-1.12.1/lib/ffaker.rb:2: warning: already initialized constant VERSION
+-- column(:spree_products, :exclusions, :reviews)
+-- column(:spree_products, :exclusions, :reviews)
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+undefined method `column' for #<ActiveRecord::Migration:0xb98221c>
+
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+sridhar@exura:~/rails_projects/sriexura-staging$ bundle exec rake db:migrate
+/home/sridhar/.rvm/gems/ruby-1.9.3-p327@rails3tutorial2ndED/gems/ffaker-1.12.1/lib/ffaker.rb:2: warning: already initialized constant VERSION
+-- column(:spree_products, :exclusions, :reviews)
+-- column(:spree_products, :exclusions, :reviews)
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+undefined method `column' for #<ActiveRecord::Migration:0xc2a4c8c>
+
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+sridhar@exura:~/rails_projects/sriexura-staging$ ^C
+sridhar@exura:~/rails_projects/sriexura-staging$ bundle exec rake db:migrate
+/home/sridhar/.rvm/gems/ruby-1.9.3-p327@rails3tutorial2ndED/gems/ffaker-1.12.1/lib/ffaker.rb:2: warning: already initialized constant VERSION
+-- rename_column(:spree_products, :exclusions, :reviews)
+   -> 0.4473s
+==  Rename: migrating =========================================================
+==  Rename: migrated (0.0000s) ================================================
+
+sridhar@exura:~/rails_projects/sriexura-staging$ 
+
+
+
+sridhar@exura:~/rails_projects/sriexura-staging$ rails g migration rename_column :spree_products, :des, :desc
+      invoke  active_record
+      create    db/migrate/20130204071347_rename_column.rb
+sridhar@exura:~/rails_projects/sriexura-staging$ bundle exec rake db:migrate
+/home/sridhar/.rvm/gems/ruby-1.9.3-p327@rails3tutorial2ndED/gems/ffaker-1.12.1/lib/ffaker.rb:2: warning: already initialized constant VERSION
+==  RenameColumn: migrating ===================================================
+-- rename_column(:spree_products, :des, :desc)
+   -> 0.3237s
+==  RenameColumn: migrated (0.3239s) ==========================================
+
+

@@ -19,6 +19,26 @@
           %li{:id =>item}
             .tab_content
               = BlueCloth.new(@product.send(item.to_sym)).to_html.html_safe
+      .left
+      .content_box
+      %label{:for => "name"} your name:
+      %input{:name => "name", :type => "text", :value => ""}
+      %br  
+      %br
+      %label{:for => "email"} your email:
+      %input{:name => "email", :type => "text", :value => ""}
+      %br  
+      %br
+        %label{:for => "body"}  Message:
+        %textarea{:name => "body"}
+      %h4.heading
+        Invite friend
+      %label{:for => "email"}  email:
+      %input{:name => "email", :type => "text", :value => ""}
+      %br
+      %br
+      %input{:type => "submit", :value => "Submit"}   
+
       -# %ul
       -#   - 5.times do
       -#     %li.angle_bullets= Faker::Lorem.sentence

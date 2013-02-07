@@ -46,7 +46,7 @@
 
     .right{"data-hook" => "admin_product_form_right"}      
       = f.inputs :name=>"HTML fields" do
-        - ["Overview", "Highlights", "Features", "Exclusions", "Cancellation Policy"].each do |field|
+        - ["Overview", "Highlights", "Features", "Reviews", "itinerary", "Cancellation Policy"].each do |field|
           = f.input field.underscore.gsub(' ', '_' ).to_sym, :as=>"text", :input_html=>{:class=>"wysiwyg"}
       
 
